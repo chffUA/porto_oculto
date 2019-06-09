@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Porto Oculto</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="alert_message_no_connection">Sem conexão à Internet!</string>
+    <string name="alert_wrong_credentials">Email ou palavra-passe errados. Por favor, tente mais tarde.</string>
+    <string name="alert_message_not_logged">Não tem sessão iniciada!</string>
+    <string name="alert_message_no_connection_connect_event">LIGAR</string>
+    <string name="alert_message_no_connection_back">Voltar à pagina de Log In</string>
+    <string name="hard_coded_string_medium">HARD CODED STRING, A SUBSTITUIR DEPOIS</string>
+    <string name="hard_coded_string_short">sou uma hard coded string</string>
+    <string name="hard_coded_string_long">sou uma hard coded string, nao esquecer tirar depois</string>
+    <string name="terms_title">Por favor, lê isto antes de acessares a aplicação!</string>
+    <string name="terms_subtitle">TERMOS E CONDIÇÕESS:</string>
+    <string name="terms_text">Clica no botão x para rejeitar e no botão v para aceitar os termos e condições e ter acesso à aplicação.</string>
+    <string name="picture_uploaded">Foto tirada com sucesso!</string>
+    <string name="navigation_drawer_open">Abrir janela de navegação</string>
+    <string name="navigation_drawer_close">Fechar janela de navegação</string>
+    <string name="action_settings">Definições</string>
+    <string name="gps_permission_is_required_in_order_to_see_the_content">É necessário acesso ao gps para continuar</string>
+    <string name="give_permission">Autorizar</string>
+    <string name="test_button">BOTAO DE TESTE</string>
+    <string name="po_not_present">Porto Oculto não está disponível na tua cidade…Ainda</string>
+    <string name="camera_button">Câmera</string>
+    <string name="no_permission">Oops.. Precisamos da sua autorização para prosseguir</string>
+    <string name="send_button">Enviar</string>
+    <string name="user">Utilizador</string>
+    <string name="sidebar_admin">Administrar</string>
+    <string name="sidebar_map">Mapa</string>
+    <string name="sidebar_mypins">Meus Pins</string>
+    <string name="sidebar_settings">Definições</string>
+    <string name="sidebar_logout">Sair</string>
+    <string name="sidebar_login">Entrar</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Entre com a sua conta</string>
+    <string name="welcome">Boas-vindas!</string>
+    <string name="email_not_verified">Ainda não verificou o seu e-mail.</string>
+    <string name="verification_email_dialog_title">Confirme o seu e-mail!</string>
+    <string name="verification_email_dialog_msg">Enviámos um e-mail para o seu correio. Por favor siga esse link para confirmar o seu e-mail. Pode também confirmá-lo numa outra altura.</string>
+    <string name="verification_email_dialog_ok">OK</string>
+    <string name="verification_email_dialog_ignore">Ignorar</string>
+
+    <!--Email Verification-->
+    <string name="email_verification_description">Enviámos um e-mail de verificação para o seu correio. Pode pedir para o reenviar caso o anterior ainda não tenha chegado.</string>
+    <string name="email_verification_btn_validate">VALIDAR CONTA</string>
+    <string name="email_verification_btn_resend">REENVIAR EMAIL</string>
+    <string name="alert_message_verification_email">Oops! Não conseguimos enviar um e-mail de verificação.</string>
+    <string name="email_was_sent">Enviamos um email de validação para <strong>%1$s</strong></string>
+    <string name="email_fail">"Não foi possível enviar um novo email de confirmação. Tente novamente."</string>
+
+    <string name="alert_message_registration">A criação da conta falhou. Por favor retente mais tarde.</string>
+    <string name="alert_message_password_not_match">As duas <strong>palavras-passe</strong> não parecem ser iguais.</string>
+    <string name="alert_message_fill_in">Por favor preencha todos os campos.</string>
+    <string name="auth_register">CRIAR CONTA</string>
+    <string name="alert_empty_credentials">Os campos do <strong>nome de utilizador</strong> e/ou <strong>palavra-passe</strong> estão vazios.</string>
+    <string name="alert_message_invalid_email">O endereço de e-mail parece ser inválido.</string>
+    <string name="alert_message_weak_password">A palavra-passe deve ter pelo menos 6 caracteres.</string>
+    <string name="alert_message_already_exists">Este e-mail já está a ser utilizado!</string>
+
+    <string name="alert_add_photo_fail">Não foi possível atualizar os pontos</string>
+    <string name="username_reg">Nome de Utilizador</string>
+    <string name="email_reg">E-mail</string>
+    <string name="pword_reg">Palavra-passe</string>
+    <string name="pwordconfirm_reg">Confirmar Palavra-passe</string>
+    <string name="signin_retry">RETENTAR</string>
+    <string name="signin_btn">ENTRAR</string>
+
+
+</resources>

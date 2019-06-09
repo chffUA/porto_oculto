@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "169808669250",
+    "firebase_url": "https://porto-oculto-fc660.firebaseio.com",
+    "project_id": "porto-oculto-fc660",
+    "storage_bucket": "porto-oculto-fc660.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169808669250:android:43d0d59a93b06bf7",
+        "android_client_info": {
+          "package_name": "pt.oitoo.portooculto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169808669250-gl24q4k09ov0d6v7qe72g64pgs1np787.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_FBlcog9C1vN-SooZwNvVFKLZhgkF74k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

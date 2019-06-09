@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_gravity="end"
+            style="@style/Widget.OITOO.DrawerOpenClose"
+            android:id="@+id/drawer_open_close">
+            <ImageView
+                style="@style/Widget.OITOO.DrawerOpenCloseImage"
+                android:id="@+id/img_drawer_menu"/>
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</layout>
+
+
+

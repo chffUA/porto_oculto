@@ -1,0 +1,111 @@
+image: jangrewe/gitlab-ci-android
+
+variables:
+  ANDROID_COMPILE_SDK: "28"
+  ANDROID_BUILD_TOOLS: "28.0.3"
+  ANDROID_SDK_TOOLS:   "4333796" # from https://developer.android.com/studio/#command-tools
+  APP_NAME: "PORTOOCULTO"
+
+cache:
+  key: ${CI_PROJECT_ID}
+  paths:
+    - .m2/
+    - .gradle/
+
+stages:
+  - build
+  - test
+  - coverage
+  - package
+
+before_script:
+  - export GRADLE_USER_HOME=$(pwd)/.gradle
+  - chmod +x ./gradlew
+  - apt-get update -y && apt-get install wget -y
+
+
+########################################################################
+# BUILD
+
+.build_template: &build
+  stage: build
+  artifacts:
+    expire_in: 4 hours
+    paths:
+      - app/build/outputs/
+
+build:develop:
+  <<: *build
+  only:
+    - develop
+  script:
+    - ./gradlew assembleDebug
+
+build:release:
+  <<: *build
+  only:
+    - master
+  script:
+    - ./gradlew assembleRelease
+
+
+########################################################################
+# TESTS
+
+.test_template: &test
+  stage: test
+  only:
+    - master
+    - develop
+
+test:unit:
+  <<: *test
+  script:
+
+    - ./gradlew clean test jacocoTestReport --stacktrace
+    - cat app/build/reports/jacoco/jacocoTestDebugUnitTestReport/html/index.html
+  coverage: '/Total.*?([0-9]{1,3})%/'
+
+  artifacts:
+    paths:
+      - app/build/reports/jacoco/jacocoTestDebugUnitTestReport/
+      - app/build/reports/jacoco/jacocoTestReleaseUnitTestReport/
+
+########################################################################
+# PACKAGE
+
+
+.package_template: &package
+  before_script:
+    - export VERSION_NAME=`egrep '^[[:blank:]]+versionName[[:blank:]]'  app/build.gradle | awk '{print $2}' | sed s/\"//g`
+    - mkdir -p exported
+
+package:develop:
+  <<: *package
+  stage: package
+  environment: Development
+  only:
+    - develop
+  script:
+    - mv app/build/outputs/apk/debug/app-debug.apk ./exported/${APP_NAME}-v$VERSION_NAME-debug.apk
+  dependencies:
+    - build:develop
+  artifacts:
+    expire_in: 7 days
+    paths:
+      - exported
+
+package:release:unsigned:
+  <<: *package
+  stage: package
+  environment: Release
+  only:
+    - master
+  script:
+    - mv app/build/outputs/apk/release/app-release-unsigned.apk ./exported/${APP_NAME}-v$VERSION_NAME-release-unsigned.apk
+  dependencies:
+      - build:release
+  artifacts:
+    expire_in: 1 month
+    paths:
+      - exported

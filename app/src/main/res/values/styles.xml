@@ -1,0 +1,317 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/oitoo_yellow</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">?colorPrimary</item>
+        <item name="toolbarStyle">@style/Widget.Toolbar</item>
+        <item name="tabStyle">@style/Widget.OITOO.Tabs</item>
+        <item name="android:textViewStyle">@style/Widget.OITOO.TextView</item>-->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:textColorTertiary">@color/text_color_tertiary</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+        <item name="navigationViewStyle">@style/Widget.Design.NavigationView</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_back</item>
+        <!--<item name="sessionListKeyline">@dimen/session_keyline</item>
+        <item name="eventFilterViewStyle">@style/Widget.IOSched.EventFilters</item>-->
+    </style>
+
+    <!-- No Action Bar -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="Base.ThemeOverlay.AppCompat.Light" />
+
+    <!-- Launcher -->
+    <style name="AppTheme.LightNav" parent="AppTheme.NoActionBar" />
+
+    <style name="AppTheme.Launcher" parent="@style/AppTheme.LightNav">
+        <item name="android:windowBackground">@drawable/preview_window</item>
+    </style>
+
+    <!-- Auth -->
+    <style name="AppTheme.Auth" parent="AppTheme.LightNav">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <!-- Widgets -->
+
+    <style name="Widget.OITOO" parent="@android:style/Widget" />
+
+    <!-- Button -->
+    <style name="Widget.OITOO.RaisedButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/gradient_horizontal_background</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="Widget.OITOO.RaisedRiskButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/raised_button_risk_background</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="Widget.OITOO.ArrowBackButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">@dimen/btn_arrow_back</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_normal</item>
+        <item name="android:layout_marginTop">@dimen/margin_normal</item>
+        <item name="android:background">@drawable/gradient_horizontal_background</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.OITOO.ArrowBackButtonImage" >
+        <item name="android:src">@drawable/ic_arrow</item>
+        <item name="android:rotation">180</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="Widget.OITOO.DrawerOpenClose" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">@dimen/btn_arrow_back</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginEnd">@dimen/margin_normal</item>
+        <item name="android:layout_marginTop">@dimen/margin_huge</item>
+        <item name="android:background">@drawable/gradient_horizontal_background</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.OITOO.DrawerOpenCloseImage" >
+        <item name="android:src">@drawable/ic_menu</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="TextAppearance.OITOO.Body" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Widget.OITOO.BorderlessButton" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:paddingTop">@dimen/padding_borderless_button</item>
+        <item name="android:paddingBottom">@dimen/padding_borderless_button</item>
+    </style>
+
+    <!-- TextView for FrameLayout -->
+    <style name="Widget.OITOO.RaisedTextView" parent="@style/TextAppearance.OITOO.Body">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white_90</item>
+    </style>
+
+    <style name="Widget.OITOO.TextView" parent="@android:style/Widget.Material.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.OITOO.Body</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
+    </style>
+
+    <!-- Progressbar -->
+    <style name="Widget.OITOO.ProgressbarWhite" parent="@android:style/Widget.Material.ProgressBar">
+        <item name="android:indeterminateTint">@color/white</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+    </style>
+
+    <style name="Widget.OITOO.ProgressbarYellow" parent="@android:style/Widget.Material.ProgressBar">
+        <item name="android:indeterminateTint">@color/oitoo_yellow</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+    </style>
+
+    <!-- Dialog -->
+    <style name="Widget.OITOO.Dialog">
+        <item name="android:padding">@dimen/margin_normal</item>
+        <item name="android:paddingBottom">@dimen/margin_normal</item>
+        <item name="android:layout_marginStart">@dimen/margin_normal</item>
+        <item name="android:layout_marginEnd">@dimen/margin_normal</item>
+        <item name="android:background">@drawable/dialog_bg</item>
+        <item name="android:elevation">@dimen/dialog_elevation</item>
+
+    </style>
+
+    <style name="TextAppearance.OITOO.DialogTitle" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/white_90</item>
+        <item name="android:background">@drawable/white_border_background</item>
+    </style>
+
+    <style name="TextAppearance.OITOO.BlackBorderedText" parent="@style/TextAppearance.OITOO.DialogTitle">
+        <item name="android:background">@drawable/black_border_background</item>
+    </style>
+
+    <style name="TextAppearance.OITOO.DialogContent" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="Widget.OITOO.DialogButtons">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- TextViews -->
+    <style name="TextAppearance.OITOO.H1" parent="@style/TextAppearance.AppCompat.Headline">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextAppearance.OITOO.H2" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextAppearance.OITOO.TextInputEditText" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:drawableLeft">@drawable/ic_arrow</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:backgroundTint">@color/white_90</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white_90</item>
+    </style>
+
+    <style name="TextAppearance.OITOO.TextInputLayout" parent="@style/Widget.Design.TextInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/margin_normal</item>
+        <item name="android:layout_marginEnd">@dimen/margin_normal</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/white_90</item>
+        <item name="android:backgroundTint">@color/fui_bgGoogle</item>
+    </style>
+
+    <style name="TextAppearance.OITOO.H3" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
+    </style>
+
+    <style name="TextAppearance.OITOO.EditText" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
+    </style>
+
+    <style name="TextAppearance.OITOO.H4" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
+    </style>
+
+    <style name="Widget.OITOO.Welcome" parent="@android:style/Widget.Material.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.OITOO.H2</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <!-- Toolbar -->
+    <style name="Widget.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.OITOO.ToolbarTitle</item>
+        <item name="popupTheme">@style/AppTheme.PopupOverlay</item>
+    </style>
+
+    <style name="TextAppearance.OITOO.ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.PopupTheme" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <!-- Tabs -->
+    <style name="Widget.OITOO.Tabs" parent="@style/Widget.MaterialComponents.TabLayout">
+        <item name="tabTextAppearance">@style/TextAppearance.OITOO.Tab</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/gradient_vertical_background</item>
+        <item name="tabGravity">fill</item>
+        <item name="android:state_selected">false</item>
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabIconTint">@color/black</item>
+
+    </style>
+
+    <style name="TextAppearance.OITOO.Tab" parent="@style/TextAppearance.MaterialComponents.Tab">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textColor">@color/tab_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+
+    </style>
+
+    <!---->
+    <style name="TextAppearance.OITOO.FabLabel" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
+        <item name="android:padding">7dip</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">@dimen/margin_normal</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:background">@drawable/shape_fab_label</item>
+    </style>
+
+    <!-- Collapsible Card -->
+    <style name="TextAppearance.OITOO.CollapsibleCard" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textColor">@color/collapsing_section</item>
+    </style>
+
+</resources>

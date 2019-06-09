@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:src="@drawable/empty_box"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+
+        <TextView
+            style="@style/TextAppearance.OITOO.H1"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="No submissions" />
+
+        <TextView style="@style/TextAppearance.OITOO.H2"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="You still haven't done any submissions of places"/>
+
+        <View
+            android:background="@color/oitoo_orange"
+            android:layout_marginTop="20dp"
+            android:layout_width="40dp"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/btn_scan_products"
+            style="@style/Widget.OITOO.BorderlessButton"
+            android:layout_marginTop="40dp"
+            android:textSize="18sp"
+            android:text="BACK TO MAP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

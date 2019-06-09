@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- primary palette -->
+    <color name="oitoo_yellow">#F5B01C</color>
+    <color name="oitoo_orange">#FF8A00</color>
+    <color name="oitooStart">#F7B323</color>
+    <color name="colorAccent">#FFF5B01C</color>
+    <color name="indigo_dark">#3c54fe</color>
+    <color name="teal">#31e7b6</color>
+    <color name="light_blue">#27e5fd</color>
+    <color name="yellow">#fcd230</color>
+    <color name="orange">#ff6c00</color>
+    <color name="white">#fff</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_600">#747474</color>
+    <color name="spacer_grey">#e0e0e0</color>
+    <color name="white_90">#e6ffffff</color>
+    <color name="risk">#F31431</color>
+    <color name="welcome_background">#F9CF7F</color>
+    <color name="fui_bgGoogle">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="status_bar">@color/oitoo_yellow</color>
+    <color name="text_color_tertiary">#dadce0</color>
+    <color name="light_grey">#e6e6e6</color>
+    <color name="default_tag_color">#999</color>
+    <color name="highlight_light">#33ffffff</color> <!-- 20% white -->
+    <color name="scrim">#33000000</color> <!-- 20% black -->
+    <color name="indigo_transparent">#e54768fd</color> <!-- 90% indigo -->
+    <color name="dark_gray">#ff808080</color>
+    <color name="oitoo_green">#1B9D1B</color>
+    <color name="oitoo_red">#9D1B2B</color>
+
+    <integer-array name="swipe_refresh">
+        <item>@color/colorAccent</item>
+        <item>@color/teal</item>
+        <item>@color/light_blue</item>
+        <item>@color/yellow</item>
+        <item>@color/orange</item>
+    </integer-array>
+
+</resources>

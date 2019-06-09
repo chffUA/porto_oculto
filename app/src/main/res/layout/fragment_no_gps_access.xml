@@ -1,0 +1,72 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="callback"
+            type="pt.oitoo.portooculto.view.callback.PermissionClickListener"/>
+        <variable
+            name="viewModel"
+            type="pt.oitoo.portooculto.viewmodel.NoGpsViewModel"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_no_gps_access"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout android:id="@+id/error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextAppearance.OITOO.H1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/no_permission"
+                android:layout_marginBottom="@dimen/margin_normal"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_no_connection"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="36dp"
+                android:fitsSystemWindows="true"
+                android:importantForAccessibility="no"
+                app:lottie_rawRes="@raw/permission"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+
+            <!--Displays a generic error message-->
+            <TextView
+                style="@style/TextAppearance.OITOO.H2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/gps_permission_is_required_in_order_to_see_the_content"
+                android:layout_marginBottom="@dimen/margin_normal"/>
+
+            <Button
+                style="@style/Widget.OITOO.RaisedButton"
+                android:id="@+id/button_give_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/give_permission"
+                android:onClick="@{() -> callback.onClick()}"/>
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+
+</layout>

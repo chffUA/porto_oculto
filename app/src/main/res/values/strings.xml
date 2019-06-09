@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">Porto Oculto</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <!-- Alert Messages -->
+    <!--Alert Message Strings-->
+    <string name="alert_message_no_connection">No <strong>internet</strong> connection!</string>
+    <string name="alert_wrong_credentials">Wrong <strong>email</strong> and/or <strong>password</strong>.</string>
+    <string name="alert_message_not_logged">You are not logged in!</string>
+    <string name="alert_message_no_connection_connect_event">CONNECT</string>
+    <string name="alert_message_no_connection_back">Back to Login</string>
+    <string name="hard_coded_string_medium">THIS IS A HARD CODED STRING, DO NOT FORGET TO REMOVE ME. I\'M HARDCODED, DO NOT FORGET TO REMOVE ME</string>
+    <string name="hard_coded_string_short">I\'m a hard coded string</string>
+    <string name="hard_coded_string_long">I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me. I\'m a hard coded string, do not forget to remove me.</string>
+    <string name="title_activity_fragment_maps" translatable="false">FragmentMaps</string>
+    <string name="picture_uploaded">Picture successfully taken!</string>
+
+    <string name="terms_title">Please read this before accessing the app!</string>
+    <string name="terms_subtitle">TERMS AND CONDITIONS:</string>
+    <string name="terms_text">Click on the x button to reject and the v button to accept the terms and conditions to access the application.</string>
+
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example" translatable="false">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_drawer" translatable="false">DrawerActivity</string>
+
+    <string name="gps_permission_is_required_in_order_to_see_the_content">GPS permission is required in order to see the content</string>
+    <string name="give_permission">Give permission</string>
+
+    <string name="facebook_app_id">273179843569988</string>
+    <string name="fb_login_protocol_scheme">fb273179843569988</string>
+    <string name="test_button">TEST BUTTON</string>
+    <string name="po_not_present">Porto Oculto is not present in your city yet.</string>
+    <string name="ok" translatable="false">Ok</string>
+    <string name="camera_button">Camera</string>
+
+    <string name="no_permission">Oops.. we require your permission to do this</string>
+    <string name="send_button">Send</string>
+
+    <string name="user">User</string>
+
+    <string name="sidebar_admin">Admin Tools</string>
+    <string name="sidebar_map">Map</string>
+    <string name="sidebar_mypins">My Pins</string>
+    <string name="sidebar_settings">Settings</string>
+    <string name="sidebar_logout">Log Out</string>
+    <string name="sidebar_login">Log In</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">LOGIN</string>
+    <string name="welcome">Welcome!</string>
+    <string name="email_not_verified">You haven\'t verified your email yet.</string>
+
+    <!--Email Verification-->
+    <string name="email_verification_description">We sent a validation email to your mail. You can request another email if our first hasn\'t arrived.</string>
+    <string name="email_verification_btn_validate">VALIDATE ACCOUNT</string>
+    <string name="email_verification_btn_resend">RESEND EMAIL</string>
+    <string name="email_was_sent">Validation link was sent to <strong>%1$s</strong></string>
+    <string name="email_fail">Failed to send verification email. Try again.</string>
+
+    <string name="verification_email_dialog_title">Verify your email!</string>
+    <string name="verification_email_dialog_msg">We\'ve sent an email to your inbox. Please follow the link if you\'d like to verify your email. You can also do this at any later time.</string>
+    <string name="alert_message_verification_email">Failed to send verification email.</string>
+    <string name="verification_email_dialog_ok">OK</string>
+    <string name="verification_email_dialog_ignore">Ignore</string>
+
+    <string name="alert_message_registration">Failed to register. Please try again later.</string>
+    <string name="alert_message_password_not_match">The two <strong>passwords</strong> don\'t seem to match.</string>
+    <string name="alert_message_fill_in">Please fill in every field.</string>
+    <string name="auth_register">REGISTER</string>
+    <string name="alert_empty_credentials">Empty <strong>username</strong> and/or <strong>password</strong> fields.</string>
+    <string name="alert_message_invalid_email">The email address seems to be invalid.</string>
+    <string name="alert_message_weak_password">The password should be at least 6 characters long.</string>
+    <string name="alert_message_already_exists">This email address is already in use!</string>
+
+    <string name="alert_add_photo_fail">We experienced some difficult with your submission, please try again in a few moments.</string>
+
+    <string name="username_reg">Username</string>
+    <string name="email_reg">Email</string>
+    <string name="pword_reg">Password</string>
+    <string name="pwordconfirm_reg">Confirm Password</string>
+    <string name="signin_retry">RETRY</string>
+    <string name="signin_btn">SIGN IN</string>
+    <string name="register">REGISTO</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="name">Name</string>
+    <string name="register_confirm">REGISTRAR</string>
+
+
+
+    <!-- Forgot Password-->
+    <string name="send">SEND</string>
+    <string name="off_map">OFF MAP</string>
+    <string name="menu">MENU</string>
+
+    <!-- Post Fragment -->
+    <string name="thank_you_for_your_submission">Thank you for your submission!</string>
+    <string name="my_pins">MY PINS</string>
+    <string name="submission_has_been">Submission has been </string>
+</resources>

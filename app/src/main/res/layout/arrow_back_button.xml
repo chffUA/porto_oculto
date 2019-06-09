@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            style="@style/Widget.OITOO.ArrowBackButton"
+            android:id="@+id/button_center_map">
+            <ImageView
+                style="@style/Widget.OITOO.ArrowBackButtonImage"
+                android:id="@+id/img_centralize"
+                android:src="@drawable/ic_arrow"/>
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</layout>
+
+
+

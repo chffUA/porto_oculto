@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinator_fragment_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/google_maps" />
+
+            <include
+                android:id="@+id/bottom_sheet"
+                layout="@layout/bottom_sheet" />
+
+            <LinearLayout
+                app:layout_dodgeInsetEdges="bottom"
+                android:layout_gravity="bottom|center"
+                android:weightSum="5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_normal">
+
+                <FrameLayout
+                    android:layout_weight="4"
+                    android:id="@+id/button_center_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/gradient_horizontal_background"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginEnd="@dimen/margin_small">
+                    <ImageView
+                        android:src="@drawable/ic_localizador"
+                        android:id="@+id/img_centralize"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:id="@+id/button_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/gradient_horizontal_background"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="@dimen/margin_small">
+                    <ImageView
+                        android:src="@drawable/ic_draggable_pin"
+                        android:id="@+id/img_pin"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:visibility="visible" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+        </android.support.design.widget.CoordinatorLayout>
+</layout>
+
+

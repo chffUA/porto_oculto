@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="pt.oitoo.portooculto.viewmodel.PostViewModel"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_post_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/diagonal_layout_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
+
+                <com.github.florent37.diagonallayout.DiagonalLayout
+                    android:id="@+id/diagonalLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:elevation="10dp"
+                    app:diagonal_angle="20"
+                    app:diagonal_direction="right"
+                    app:diagonal_position="bottom">
+
+                    <ImageView
+                        android:id="@+id/img_building"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignTop="@+id/diagonalLayout"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background"
+                        app:setGlideDrawable="@{viewModel.post.cameraBitmap}" />
+
+                </com.github.florent37.diagonallayout.DiagonalLayout>
+
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edt_address_post"
+                style="@style/TextAppearance.OITOO.EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="104dp"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="@drawable/address_background"
+                android:clickable="false"
+                android:textStyle="bold"
+                android:cursorVisible="false"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:elevation="20dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:padding="@dimen/margin_small"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="@{viewModel.post.address}"
+                android:translationZ="@dimen/margin_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="@+id/diagonal_layout_container"
+                tools:text="Rua de Alexandre Braga, 99" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floating_action_evaluate"
+                android:layout_width="147dp"
+                android:layout_height="147dp"
+                android:layout_alignStart="@+id/diagonal_layout_container"
+                android:layout_alignEnd="@+id/diagonal_layout_container"
+                android:layout_alignBottom="@+id/diagonal_layout_container"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/gradient_vertical_background"
+                android:elevation="30dp"
+                android:translationZ="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/diagonal_layout_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="35dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:translationZ="35dp"
+                app:layout_constraintBottom_toBottomOf="@+id/diagonal_layout_container"
+                android:layout_alignStart="@+id/diagonal_layout_container"
+                android:layout_alignEnd="@+id/diagonal_layout_container"
+                android:layout_alignBottom="@+id/diagonal_layout_container"
+                android:orientation="vertical"
+                android:layout_width="147dp"
+                android:gravity="center"
+                android:layout_height="147dp">
+
+                <ImageView
+                    android:id="@+id/img_building_state"
+                    android:layout_marginEnd="4dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_selecionador" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_building_state"
+                style="@style/TextAppearance.OITOO.H2"
+                android:textColor="@color/white_90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/diagonal_layout_container"
+                android:layout_alignEnd="@+id/diagonal_layout_container"
+                android:layout_alignBottom="@+id/diagonal_layout_container"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="28dp"
+                android:elevation="35dp"
+                android:text="@{viewModel.post.buildingStatus}"
+                android:gravity="center_horizontal"
+                android:translationZ="35dp"
+                app:layout_constraintBottom_toBottomOf="@+id/diagonal_layout_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.485"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floating_ruin"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/oitoo_red"
+                android:src="@drawable/ic_ruina"
+                app:layout_constraintBottom_toTopOf="@+id/floating_degraded"
+                app:layout_constraintEnd_toStartOf="@+id/floating_degraded"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/diagonal_layout_container"
+                app:maxImageSize="64dp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:src="@drawable/ic_degradado"
+                android:backgroundTint="@color/oitoo_orange"
+                app:maxImageSize="64dp"
+                android:id="@+id/floating_degraded"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="72dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toStartOf="@+id/floating_good_state"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/diagonal_layout_container" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:src="@drawable/ic_bom_estado"
+                android:backgroundTint="@color/oitoo_yellow"
+                app:maxImageSize="64dp"
+                android:id="@+id/floating_good_state"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="72dp"
+                android:layout_marginEnd="128dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/diagonal_layout_container" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:src="@drawable/ic_terreno"
+                android:backgroundTint="@color/oitoo_green"
+                app:maxImageSize="64dp"
+                android:id="@+id/floating_terrain"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/floating_good_state"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/floating_good_state"
+                app:layout_constraintTop_toBottomOf="@+id/diagonal_layout_container"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+        <FrameLayout
+            android:layout_weight="1"
+            android:id="@+id/frame_upload"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/gradient_horizontal_background"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:onClick="@{() -> viewModel.startPublishing()}">
+            <TextView
+                android:text="SUBMIT"
+                android:textStyle="bold"
+                textColor="@color/white_90"
+                style="@style/TextAppearance.OITOO.H2"
+                android:id="@+id/txt_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_post"
+                style="@style/Widget.OITOO.ProgressbarWhite"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:translationZ="10dp"
+                android:visibility="invisible"
+                app:setValidatingProgressVisibility="@{ viewModel.post.isValidatingFields }"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/reveal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:elevation="25dp"
+            android:layout_gravity="center_horizontal"
+            android:background="?colorAccent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt_welcome"
+                    style="@style/TextAppearance.OITOO.H1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:alpha="0"
+                    android:text="@string/thank_you_for_your_submission"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_complete"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fitsSystemWindows="true"
+                    android:importantForAccessibility="no"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
+                    app:lottie_rawRes="@raw/check_mark_success" />
+
+                <FrameLayout
+                    android:id="@+id/frame_add_more_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:layout_weight="1"
+                    android:background="@drawable/gradient_horizontal_background"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:onClick="@{() -> viewModel.goToAddMoreInfo()}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/animation_complete"
+                    app:layout_constraintVertical_bias="0.938">
+
+                    <TextView
+                        android:id="@+id/txt_add_mais_info"
+                        style="@style/TextAppearance.OITOO.H2"
+                        textColor="@color/white_90"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ADD MORE INFO"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                </FrameLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+        </FrameLayout>
+
+        <include
+            android:translationZ="10dp"
+            layout="@layout/arrow_back_button"
+            android:id="@+id/arrow_back_button"/>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

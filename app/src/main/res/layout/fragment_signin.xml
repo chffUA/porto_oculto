@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="pt.oitoo.portooculto.viewmodel.SignInViewModel"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_auth_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:src="@drawable/porto_oculto_welcome_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginTop="@dimen/margin_huge"
+                android:id="@+id/img_login_logo"
+                android:src="@drawable/logo_portooculto_welcome"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"/>
+
+            <TextView
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:textColor="@color/white"
+                style="@style/TextAppearance.OITOO.DialogTitle" />
+
+            <LinearLayout
+                android:color="@color/white"
+                android:paddingStart="@dimen/margin_normal"
+                android:paddingEnd="@dimen/margin_normal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tl_auth_mail"
+                    style="@style/TextAppearance.OITOO.TextInputLayout"
+                    app:passwordToggleContentDescription="Email">
+                    <android.support.design.widget.TextInputEditText
+                        style="@style/TextAppearance.OITOO.TextInputEditText"
+                        android:id="@+id/et_auth_mail"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:text="@={viewModel.signIn.email}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tl_auth_password"
+                    style="@style/TextAppearance.OITOO.TextInputLayout"
+                    app:passwordToggleContentDescription="Password"
+                    app:passwordToggleEnabled="true">
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_auth_pwd"
+                        style="@style/TextAppearance.OITOO.TextInputEditText"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:text="@={ viewModel.signIn.password }" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/frame_signin"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        app:clickable="@{ viewModel.signIn.isValidatingFields }"
+                        android:background="@drawable/rounded_white_button"
+                        android:elevation="4dp"
+                        android:focusable="true"
+                        android:layout_gravity="start"
+                        android:foreground="?selectableItemBackground"
+                        android:onClick="@{ () -> viewModel.signin() }">
+                        <TextView
+                            android:id="@+id/txt_signin"
+                            android:textColor="@color/black"
+                            style="@style/Widget.OITOO.RaisedTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/signin_btn" />
+                        <ProgressBar
+                            android:id="@+id/progress_bar2"
+                            style="@style/Widget.OITOO.ProgressbarYellow"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:translationZ="10dp"
+                            android:visibility="invisible"
+                            app:setValidatingProgressVisibility="@{ viewModel.signIn.isValidatingFields }"/>
+                    </FrameLayout>
+
+                    <com.facebook.login.widget.LoginButton
+                        android:gravity="end"
+                        android:id="@+id/login_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_register"
+                    android:textAppearance="@style/TextAppearance.OITOO.H2"/>
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:id="@+id/forgot_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot password"
+                    android:textAppearance="@style/TextAppearance.OITOO.H2"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/reveal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:elevation="25dp"
+            android:layout_gravity="center_horizontal"
+            android:background="?colorAccent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt_welcome"
+                    style="@style/TextAppearance.OITOO.H1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:alpha="0"
+                    android:text="@string/welcome"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_complete"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fitsSystemWindows="true"
+                    android:importantForAccessibility="no"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
+                    app:lottie_rawRes="@raw/check_mark_success" />
+            </android.support.constraint.ConstraintLayout>
+        </FrameLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
